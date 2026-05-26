@@ -1230,7 +1230,9 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         <section id="tab-gerador" class="tab-content hidden space-y-6">
             <div class="max-w-2xl mx-auto text-center space-y-2">
                 <h3 class="font-orbitron text-2xl font-bold text-slate-100">Gerador de Fichas de Mentoria</h3>
-                    <p class="text-slate-400 text-sm">Preencha o progresso e o desempenho do candidato para gerar o payload JSON de embed do Discord.</p>
+                <p class="text-slate-400 text-sm">Preencha o progresso e o desempenho do candidato para gerar o log formatado em Markdown para canais internos do Discord.</p>
+            </div>
+
             <div class="max-w-2xl mx-auto bg-slate-950/80 border border-slate-900 rounded-2xl p-6 glow-border grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Form Inputs -->
                 <div class="space-y-4 text-xs md:text-sm">
@@ -2095,18 +2097,11 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             const veredito = document.getElementById('cand-veredito').value;
             const obs = document.getElementById('cand-obs').value || 'Sem notas adicionais.';
 
-            const payload = {
-                content: "",
-                tts: false,
-                embeds: [
-                    {
-                        id: 877232429,
-                        description:
-`====================================
-📝  **RELOTÓRIO MENTORIA**
+            const template = `====================================
+📝 **FICHA DE TREINAMENTO DE STAFF**
 ====================================
 
-👤 **CANDIDATO:** ${name}
+👤 **Candidato:** ${name}
 🆔 **ID:** ${id}
 
 📊 **AVALIAÇÃO DO MENTOR:**
@@ -2119,24 +2114,10 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
 💬 **Observações e Pontos de Atenção:**
 "${obs}"
 
-**Avaliado por: Equipe de Mentoria do Fronteira RP**
-====================================`,
-                        fields: [],
-                        color: 917248,
-                        image: {
-                            url: "https://santaimagens.roleplayrp.com/img/imagens_variadas/connect/banner_fronteira.png"
-                        },
-                        thumbnail: {
-                            url: "https://cdn.discordapp.com/icons/650318652364685326/d2b8722e2d17285f7a382023fdc78516.webp?size=256"
-                        }
-                    }
-                ],
-                components: [],
-                actions: {},
-                flags: 0
-            };
+*Avaliado por: Equipe de Mentoria do Fronteira RP*
+====================================`;
 
-            document.getElementById('discord-output').value = JSON.stringify(payload, null, 2);
+            document.getElementById('discord-output').value = template;
         }
 
         function copyToClipboard() {
