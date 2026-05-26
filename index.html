@@ -597,6 +597,50 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         .glow-text {
             text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
         }
+        .tab-btn {
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .tab-btn {
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .tab-btn:hover {
+            color: #d1fae5 !important;
+            background-color: rgba(15, 23, 42, 0.95) !important;
+            border-color: rgba(16, 185, 129, 0.45) !important;
+            box-shadow: 0 18px 40px rgba(16, 185, 129, 0.18) !important;
+            transform: translateY(-1px);
+        }
+        .hover-glow {
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+            cursor: pointer;
+        }
+        .hover-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 45px rgba(16, 185, 129, 0.24) !important;
+            background-color: rgba(15, 23, 42, 0.92) !important;
+            border-color: rgba(16, 185, 129, 0.55) !important;
+        }
+        .hover-glow-soft:hover {
+            box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.25), 0 10px 30px rgba(16, 185, 129, 0.12) !important;
+        }
+        .folder-btn:hover,
+        .case-idx-btn:hover,
+        .option-label:hover,
+        .tab-btn:hover,
+        .hover-glow:hover,
+        [class*="bg-slate-900/20"]:hover,
+        [class*="bg-slate-900/50"]:hover,
+        [class*="bg-slate-950/60"]:hover,
+        [class*="bg-slate-950/80"]:hover,
+        [class*="bg-slate-900/30"]:hover {
+            border-color: rgba(16, 185, 129, 0.45) !important;
+            box-shadow: 0 20px 50px rgba(16, 185, 129, 0.22) !important;
+            background-color: rgba(15, 23, 42, 0.94) !important;
+            transform: translateY(-1px);
+        }
         /* Custom scrollbar matching the green theme */
         ::-webkit-scrollbar {
             width: 8px;
@@ -670,23 +714,23 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
         <section id="tab-metodologia" class="tab-content space-y-6 hidden">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <!-- Fase 1 -->
-                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all">
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all hover-glow">
                     <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mb-4">
                         01
                     </div>
                     <h3 class="font-bold text-lg text-slate-100">Alinhamento</h3>
                     <p class="text-sm text-slate-400 mt-2">
-                        Avaliar o histórico, maturidade e motivação do candidato para assumir a responsabilidade de ser Staff na cidade.
+                        Avaliar maturidade e motivação do candidato para assumir a responsabilidade de ser Staff na cidade.
                     </p>
                     <ul class="text-xs text-slate-500 mt-3 space-y-1">
-                        <li>• Análise de perfil</li>
-                        <li>• Alinhamento de expectativas</li>
                         <li>• Conduta fora e dentro do personagem</li>
+                        <li><!--• Alinhamento de expectativas--></li>
+                        <li><!--• Análise de perfil--></li>
                     </ul>
                 </div>
 
                 <!-- Fase 2 -->
-                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all">
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all hover-glow">
                     <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mb-4">
                         02
                     </div>
@@ -696,13 +740,13 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                     </p>
                     <ul class="text-xs text-slate-500 mt-3 space-y-1">
                         <li>• Powergaming &amp; Metagaming</li>
-                        <li>• Fairplay nas ações</li>
-                        <li>• Definição de Zonas Seguras</li>
+                        <li><!--• Fairplay nas ações--></li>
+                        <li><!--• Definição de Zonas Seguras--></li>
                     </ul>
                 </div>
 
                 <!-- Fase 3 -->
-                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all">
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all hover-glow">
                     <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mb-4">
                         03
                     </div>
@@ -713,23 +757,23 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                     <ul class="text-xs text-slate-500 mt-3 space-y-1">
                         <li>• Moderação de conflitos</li>
                         <li>• Avaliação de clips e provas</li>
-                        <li>• Uso correto de ferramentas</li>
+                        <li><!--• Uso correto de ferramentas--></li>
                     </ul>
                 </div>
 
                 <!-- Fase 4 -->
-                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all">
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-5 hover:border-emerald-500/30 transition-all hover-glow">
                     <div class="w-12 h-12 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mb-4">
                         04
                     </div>
-                    <h3 class="font-bold text-lg text-slate-100">Avaliação &amp; Estágio</h3>
+                    <h3 class="font-bold text-lg text-slate-100">Avaliação</h3>
                     <p class="text-sm text-slate-400 mt-2">
                         Aplicação de teste técnico, acompanhamento inicial assistido e feedback construtivo do mentor antes da liberação.
                     </p>
                     <ul class="text-xs text-slate-500 mt-3 space-y-1">
                         <li>• Quiz de regras básicas</li>
-                        <li>• Acompanhamento assistido</li>
-                        <li>• Feedback e Veredito</li>
+                        <li><!--• Acompanhamento assistido--></li>
+                        <li><!--• Feedback e Veredito--></li>
                     </ul>
                 </div>
             </div>
@@ -1811,14 +1855,14 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             {
                 num: 2,
                 q: "Um jogador capota seu carro esportivo, despenca de uma montanha, cai sobre as quatro rodas e continua dirigindo sem parar para simular dores ou avaria física do carro. Que regra foi violada?",
-                correct: "A",
+                correct: "D",
                 feedbackCorrect: "✅ Perfeito! É Powergaming - ignorar limitações físicas/mecânicas da simulação.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Powergaming (Ações irrealistas ou desconsideração deliberada das limitações mecânicas/físicas de simulação).",
                 opts: [
-                    { val: "A", t: "A) Powergaming (Ações irrealistas)." },
-                    { val: "B", t: "B) VDM (Vehicle Deathmatch - Matar pessoas intencionalmente usando veículos)." },
-                    { val: "C", t: "C) RDM (combate aleatório sem motivo de roleplay)." },
-                    { val: "D", t: "D) Metagaming com mecânicas do jogo." }
+                    { val: "A", t: "A) Metagaming." },
+                    { val: "B", t: "B) VDM." },
+                    { val: "C", t: "C) RDM." },
+                    { val: "D", t: "D) Powergaming." }
                 ]
             },
             {
@@ -1828,7 +1872,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 feedbackCorrect: "✅ Correto! Fear RP é simular medo/pânico quando desarmado sob mira.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Simular a reação biológica de pânico ou medo legítimo quando o seu personagem se encontra desarmado ou rendido sob a mira de armas letais carregadas.",
                 opts: [
-                    { val: "A", t: "A) É obrigatório valorizar a vida do seu personagem como se ele fosse a única, fazendo tudo que for possível para não coloca-la em risco, principalmente enquanto estiver tendo interação com outros jogadores." },
+                    { val: "A", t: "A) É obrigatório valorizar a vida do seu personagem como se ele fosse a única." },
                     { val: "B", t: "B) O direito de reagir imediatamente contra assaltos se o seu personagem possuir plano VIP ou pertencer a facções criminosas." },
                     { val: "C", t: "C) Apenas jogadores de corporações oficiais podem usar esta regra defensivamente." },
                     { val: "D", t: "D) Medo é irrelevante em simulação se o jogador tem 100% de vida." }
@@ -1842,7 +1886,7 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 feedbackWrong: "❌ Incorreto! A resposta correta é: B) Estritamente para fins de moderação técnica, monitorar eventos ou dar suporte rápido fora das vistas dos jogadores, para não atrapalhar a imersão.",
                 opts: [
                     { val: "A", t: "A) Para voar de forma recreativa pela cidade e brincar/conversar no jogo com amigos íntimos." },
-                    { val: "B", t: "B) Estritamente para fins de moderação técnica, monitorar eventos ou dar suporte rápido fora das vistas dos jogadores, para não atrapalhar a imersão." },
+                    { val: "B", t: "B) Monitorar eventos ou dar suporte rápido fora das vistas dos jogadores, para não atrapalhar a imersão." },
                     { val: "C", t: "C) Para explorar o mapa e encontrar novos locais para conteúdo de live." },
                     { val: "D", t: "D) Durante eventos públicos para manter ordem e aparecer para os players." }
                 ]
@@ -1863,12 +1907,12 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             {
                 num: 6,
                 q: "Qual a definição correta da regra de 'RDM (Random Deathmatch)'?",
-                correct: "A",
+                correct: "B",
                 feedbackCorrect: "✅ Perfeito! RDM é matar sem motivo ou interação prévia de RP.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Agredir gravemente ou abater outro personagem sem que tenha ocorrido qualquer interação de voz prévia ou motivo de RP justificável.",
                 opts: [
-                    { val: "A", t: "A) Matar sem motivo." },
-                    { val: "B", t: "B) Atropelar intencionalmente um grupo de pedestres usando caminhões de lixo." },
+                    { val: "A", t: "A) Atropelar intencionalmente um grupo de pedestres usando caminhões de lixo." },
+                    { val: "B", t: "B) Matar sem motivo." },
                     { val: "C", t: "C) Disparar armas em eventos por celebração ou diversão." },
                     { val: "D", t: "D) Atirar em alguém que o provocou verbalmente sem contexto." }
                 ]
@@ -1887,28 +1931,41 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
                 ]
             },
             {
+                num: 8,
+                q: "Qual é a principal regra em um servidor de Roleplay (RP)?",
+                correct: "B",
+                feedbackCorrect: "✅ Excelente! É Combat Storing - guardar itens durante ação ativa para evitar perdas.",
+                feedbackWrong: "❌ Incorreto! A resposta correta é: B) Combat Storing (Guardar itens ou recursos no meio de uma ação ativa para evitar perdas ou apreensão).",
+                opts: [
+                    { val: "A", t: "A) Usar hacks para ter vantagem." },
+                    { val: "B", t: "B) Sempre manter o personagem (não quebrar o RP)." },
+                    { val: "C", t: "C) Ficar pulando e gritando no meio da cidade." },
+                    { val: "D", t: "D)  Ignorar outras pessoas e jogar sozinho." }
+                ]
+            },
+            {
                 num: 9,
-                q: "O que significa 'COMBAT LOOTING' no servidor?",
+                q: "Qual a nossa 'Cultura'?",
                 correct: "A",
                 feedbackCorrect: "✅ Perfeito! Combat Looting é saquear/revistar durante confronto ativo.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Saquear o corpo de jogadores abatidos ou revistar policiais enquanto o confronto armado ou tiroteio ainda está ativamente ocorrendo na área local.",
                 opts: [
-                    { val: "A", t: "A) Saquear o corpo de jogadores abatidos ou revistar policiais enquanto o confronto armado ou tiroteio ainda está ativamente ocorrendo na área local." },
-                    { val: "B", t: "B) Comprar armas ilegais no meio de uma perseguição policial de alta velocidade." },
-                    { val: "C", t: "C) Looting é permitido após evento terminar." },
-                    { val: "D", t: "D) Apenas revistar criminosos, não policiais." }
+                    { val: "A", t: "A) #SEJA-GENTE-BOA" },
+                    { val: "B", t: "B) #PRA-CIMA-FRONTEIRA." },
+                    { val: "C", t: "C) #FAÇO-BEM." },
+                    { val: "D", t: "D) #CUIDAR-DA-CIDADE." }
                 ]
             },
             {
                 num: 10,
-                q: "Um jogador passa deliberadamente na frente do Departamento Policial buzinando sem parar e realizando manobras perigosas sem nenhum contexto de simulação apenas para forçar uma perseguição. Qual infração foi cometida?",
-                correct: "A",
+                q: "O que é 'DarkRP'?",
+                correct: "C",
                 feedbackCorrect: "✅ Correto! Cop Baiting é provocar segurança sem motivo de RP.",
-                feedbackWrong: "❌ Incorreto! A resposta correta é: A) Cop Baiting (Provocar deliberadamente as corporações de segurança sem qualquer profundidade ou motivo de RP para forçar perseguições).",
+                feedbackWrong: "❌ Incorreto! A resposta correta é: C) Racismo e preconceitos em geral no qual ofende a pessoa.",
                 opts: [
-                    { val: "A", t: "A) Cop Baiting (Provocar deliberadamente as corporações de segurança sem qualquer profundidade ou motivo de RP para forçar perseguições)." },
-                    { val: "B", t: "B) Metagaming com a viatura." },
-                    { val: "C", t: "C) RDM contra policiais." },
+                    { val: "A", t: "A) Racismo e preconceitos em geral." },
+                    { val: "B", t: "B) Metagaming." },
+                    { val: "C", t: "C) Racismo e preconceitos em geral no qual ofende a pessoa." },
                     { val: "D", t: "D) Dirigir agressivamente perto de delegacia é permitido." }
                 ]
             },
@@ -1927,25 +1984,25 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             },
             {
                 num: 12,
-                q: "O que é uma 'ZONA SEGURA / SAFEZONE' no Fronteira RP?",
-                correct: "B",
+                q: "O que é uma 'SAFEZONE' no Fronteira RP?",
+                correct: "D",
                 feedbackCorrect: "✅ Correto! SafeZones são áreas onde violência/crimes são totalmente proibidos.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: B) Locais (como hospitais, praça central ou concessionárias) onde agressões, roubos, sequestros e assassinatos são totalmente proibidos para garantir a segurança dos jogadores.",
                 opts: [
                     { val: "A", t: "A) Áreas do mapa onde a polícia pode atirar para matar criminosos sem aviso prévio." },
-                    { val: "B", t: "B) Locais (como hospitais, praça central ou concessionárias) onde agressões, roubos, sequestros e assassinatos são totalmente proibidos para garantir a segurança dos jogadores." },
+                    { val: "B", t: "B) Áreas controladas por Staff onde todos devem sair." },
                     { val: "C", t: "C) Zonas onde apenas VIPs podem entrar sem risco." },
-                    { val: "D", t: "D) Áreas controladas por Staff onde todos devem sair." }
+                    { val: "D", t: "D) Locais como (hospital e praça) onde nao e permitido roubo." }
                 ]
             },
             {
                 num: 13,
                 q: "Um jogador usa termos do jogo para insultar, difamar e expor fotos reais de outro jogador em canais públicos de bate-papo. Qual a conduta aplicável?",
                 correct: "A",
-                feedbackCorrect: "✅ Perfeito! Doxxing/assédio grave = banimento permanente imediato.",
+                feedbackCorrect: "✅ Perfeito! toxidade = banimento permanente imediato.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Banimento imediato e permanente do Discord e do jogo por assédio pessoal, vazamento de dados privados (Doxxing) e toxicidade severa.",
                 opts: [
-                    { val: "A", t: "A) Banimento imediato e permanente do Discord e do jogo por assédio pessoal, vazamento de dados privados (Doxxing) e toxicidade severa." },
+                    { val: "A", t: "A) Banimento imediato assédio pessoal, toxicidade." },
                     { val: "B", t: "B) Aplica-se uma advertência pedagógica leve para ele pedir desculpas públicas." },
                     { val: "C", t: "C) Suspender por 3 dias e dar segunda chance." },
                     { val: "D", t: "D) Apenas remover a mensagem e avisar no privado." }
@@ -1954,27 +2011,27 @@ url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMExce
             {
                 num: 14,
                 q: "O que é a infração de 'FORÇAR RP' no FiveM?",
-                correct: "B",
-                feedbackCorrect: "✅ Excelente! Forçar RP é obrigar outro player a participar de simulação sem defesa.",
+                correct: "C",
+                feedbackCorrect: "✅ Excelente! Obrigar outro jogador a realizar uma acao.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: B) Obrigar outro jogador a aceitar ou participar de um cenário de simulação que não faça sentido biológico ou que retire completamente as opções dele de se defender legitimamente.",
                 opts: [
                     { val: "A", t: "A) Prender criminosos na favela usando armamento letal pesado." },
-                    { val: "B", t: "B) Obrigar outro jogador a aceitar ou participar de um cenário de simulação que não faça sentido biológico ou que retire completamente as opções dele de se defender legitimamente." },
-                    { val: "C", t: "C) Criar eventos com roteiro obrigatório para todos." },
+                    { val: "B", t: "B) Criar eventos com roteiro obrigatório para todos." },
+                    { val: "C", t: "C) Obrigar outro jogador a realizar uma acao." },
                     { val: "D", t: "D) Forçar RP é permitido entre amigos." }
                 ]
             },
             {
                 num: 15,
-                q: "Um jogador utiliza o comando `/me` de forma irrealista para se desamarrar ou forçar uma ação impossível para obter vantagens Dentro do Personagem. Que infração foi cometida?",
+                q: "Um jogador utiliza o comando /me de forma indevida após ser abatido em uma ação, tentando realizar ações impossíveis ou obter vantagens dentro da situação RP. Que infração foi cometida?",
                 correct: "A",
                 feedbackCorrect: "✅ Correto! Powergaming é usar comandos de forma irrealista para vantagem.",
                 feedbackWrong: "❌ Incorreto! A resposta correta é: A) Powergaming / Uso indevido de comandos de simulação para forçar ações inexistentes.",
                 opts: [
-                    { val: "A", t: "A) Powergaming / Uso indevido de comandos de simulação para forçar ações inexistentes." },
-                    { val: "B", t: "B) Metagaming informacional por comando." },
+                    { val: "A", t: "A) Powergaming." },
+                    { val: "B", t: "B) Metagaming." },
                     { val: "C", t: "C) Uso de /me é sempre permitido livremente." },
-                    { val: "D", t: "D) Combat Storing avançado." }
+                    { val: "D", t: "D) Combat Logging." }
                 ]
             }
         ];
